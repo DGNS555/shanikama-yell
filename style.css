@@ -80,3 +80,7 @@ footer b{font-family:var(--font-display);color:var(--pink);font-weight:400}
   .logo{font-size:.9rem}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* 画像の縦伸び修正 */
+img{height:auto}
+.sky img{width:100%;aspect-ratio:1/1;object-fit:cover}
