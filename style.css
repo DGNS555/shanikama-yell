@@ -111,3 +111,26 @@ footer b{font-family:var(--font-display);color:var(--pink);font-weight:400}
   .sky-mini{width:84px;height:84px}
   .about h2{font-size:1.75rem}
 }
+
+/* ===== 曲ページ ===== */
+.song-page{padding:2.5rem 0 4rem}
+.song-top{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:2rem;align-items:start}
+.song-top .art{aspect-ratio:1;border:5px solid var(--plum);border-radius:22px;overflow:hidden;
+  background:linear-gradient(135deg,var(--pink),var(--cyan));box-shadow:8px 8px 0 var(--pink)}
+.song-top img{width:100%;height:100%;object-fit:cover}
+.song-title{font-family:var(--font-body);font-weight:900;font-size:clamp(2rem,7vw,3.4rem);line-height:1.25;color:var(--pink);
+  -webkit-text-stroke:.14em var(--white);paint-order:stroke fill;filter:drop-shadow(0 3px 0 var(--plum))}
+.song-desc{margin-top:1rem}
+.song-links{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
+.song-links .btn{margin:0}
+.soon{margin-top:1.4rem;font-weight:700}
+.video{aspect-ratio:16/9;margin-top:2.4rem;border:5px solid var(--plum);border-radius:20px;overflow:hidden;box-shadow:8px 8px 0 var(--pink)}
+.video iframe{width:100%;height:100%;border:0}
+.sec-title{font-family:var(--font-display);font-weight:400;color:var(--pink);margin:2.4rem 0 .8rem;
+  -webkit-text-stroke:.2em var(--white);paint-order:stroke fill;filter:drop-shadow(0 3px 0 var(--plum))}
+.lyrics{white-space:pre-wrap;background:var(--white);border:4px solid var(--plum);border-radius:20px;padding:1.4rem;box-shadow:6px 6px 0 var(--pink)}
+.song-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:2.6rem}
+.song-nav .btn{margin:0;font-size:.9rem}
+.btn.alt{background:var(--plum)}
+.back{text-align:center;margin-top:1.8rem;font-weight:700}
+@media(max-width:760px){.song-top{grid-template-columns:1fr}.song-nav{flex-direction:column}.song-nav .btn{text-align:center}}
