@@ -8,6 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Titan+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<script>
+/* 再読み込み時は、ハッシュ(#releasesなど)と前回のスクロール位置を使わず、必ずトップから表示する */
+(function(){
+  var n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];
+  if(!n||n.type!=="reload")return;
+  if("scrollRestoration" in history)history.scrollRestoration="manual";
+  if(location.hash)history.replaceState(null,"",location.pathname+location.search);
+  window.addEventListener("load",function(){window.scrollTo(0,0);});
+})();
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
