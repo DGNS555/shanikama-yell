@@ -81,25 +81,33 @@ footer b{font-family:var(--font-display);color:var(--pink);font-weight:400}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
-/* 紹介文リニューアル：トップ画像を外し、SKYはAboutに小さく配置 */
+/* ===== Hero：ポップなタイトル（直立）＋右下に斜めキャッチを重ねる ===== */
 .hero .wrap{grid-template-columns:1fr}
-.hero .copy{margin-top:1.6rem;max-width:30em}
-.hero .copy p{margin:0 0 .8em;font-size:1.05rem}
+.hero .wrap>div{width:100%}
+.title{position:relative;width:fit-content;padding-bottom:1rem;margin-bottom:1.2rem}
+.hero h1.sticker{font-family:"Titan One","Dela Gothic One",sans-serif;font-weight:400;
+  font-size:clamp(2rem,9.6vw,5.4rem);line-height:1.15;letter-spacing:.01em;white-space:nowrap;transform:none;
+  -webkit-text-stroke:.2em var(--white);paint-order:stroke fill;
+  filter:drop-shadow(0 4px 0 var(--plum)) drop-shadow(0 0 14px rgba(255,45,149,.35))}
+.hero p.catch{position:absolute;right:-.4rem;bottom:0;z-index:1;margin:0;max-width:none;
+  padding:.15em .8em;border-radius:8px;background:var(--plum);color:var(--white);
+  font-weight:900;font-size:clamp(.8rem,3.3vw,1.05rem);line-height:1.6;white-space:nowrap;
+  box-shadow:3px 3px 0 var(--pink);transform:rotate(-6deg)}
+.hero .copy{max-width:30em}
+.hero .copy p{margin:0 0 .8em;font-size:1.05rem;max-width:none}
 .strong{font-weight:900}
-.about .box{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:start}
+.cta{display:flex;justify-content:center;margin-top:1.8rem}
+.cta .btn{margin-top:0}
+
+/* ===== About：画像の右に見出し、説明文は枠幅いっぱい ===== */
+.about .box{display:block}
+.about-head{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.2rem}
+.about-head h2{margin:0;white-space:nowrap}
 .about .box p{margin:0 0 .9em}
-.sky-mini{width:120px;height:120px;object-fit:cover;border-radius:50%;border:4px solid var(--plum);
+.sky-mini{width:120px;height:120px;flex:none;object-fit:cover;border-radius:50%;border:4px solid var(--plum);
   box-shadow:4px 4px 0 var(--pink),0 0 22px rgba(255,45,149,.45)}
 @media(max-width:760px){
   .hero .wrap{text-align:left}
-  .hero .copy{margin-inline:0}
-  .about .box{grid-template-columns:84px 1fr;gap:1rem}
   .sky-mini{width:84px;height:84px}
+  .about h2{font-size:1.75rem}
 }
-
-/* キャッチコピーを読みやすく：丸ゴシック太字＋細い白縁＋字間 */
-.hero h1.sticker{
-  font-family:var(--font-body);font-weight:900;
-  font-size:clamp(2.2rem,8vw,4.6rem);line-height:1.3;letter-spacing:.06em;
-  -webkit-text-stroke:.14em var(--white);paint-order:stroke fill;
-  filter:drop-shadow(0 3px 0 var(--plum)) drop-shadow(0 0 10px rgba(255,45,149,.3))}
