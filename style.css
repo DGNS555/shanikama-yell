@@ -90,7 +90,8 @@ footer b{font-family:var(--font-display);color:var(--pink);font-weight:400}
   -webkit-text-stroke:.2em var(--white);paint-order:stroke fill;
   filter:drop-shadow(0 4px 0 var(--plum)) drop-shadow(0 0 14px rgba(255,45,149,.35))}
 .hero p.catch{position:absolute;right:-.4rem;bottom:0;z-index:1;margin:0;max-width:none;
-  padding:.15em .8em;border-radius:8px;background:var(--plum);color:var(--white);
+  padding:.1em .8em;border-radius:8px;background:transparent;border:3px solid var(--plum);color:var(--plum);
+  -webkit-text-stroke:.16em var(--white);paint-order:stroke fill;
   font-weight:900;font-size:clamp(.8rem,3.3vw,1.05rem);line-height:1.6;white-space:nowrap;
   box-shadow:3px 3px 0 var(--pink);transform:rotate(-6deg)}
 .hero .copy{max-width:30em}
